@@ -13,7 +13,11 @@ For an overview of how to extend this package, see [capra_simulation overview](d
 
 ### Usage
 
-$ *roslaunch capra_simulation simulation.launch*
+Before launching the projet you must have built it (this implies that you have also sourced your environment) once before. After this, you can use ROS to launch the simulation. 
+
+```sh
+$ roslaunch capra_simulation simulation.launch
+```
 
 By default, the launch files will open the Gazebo GUI and rviz GUI.
 
