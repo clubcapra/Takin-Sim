@@ -496,8 +496,20 @@
             </plugin>
         </sensor>
     </gazebo>
+   
+   <transmission name="tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="capra_robot__left_wheel_back_hinge">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
 
-    <!-- Controller -->
+
+    <!-- Old Controller 
     <gazebo>
         <plugin name="object_controller" filename="libgazebo_ros_planar_move.so">
             <commandTopic>/cmd_vel</commandTopic>
@@ -506,7 +518,12 @@
             <odometryRate>5.0</odometryRate>
             <robotBaseFrame>base_link</robotBaseFrame>
         </plugin>
-    </gazebo>
+    </gazebo>    
+    -->
 
-
+   <gazebo>
+     <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+    	 <robotNamespace>/capra_robot</robotNamespace>
+     </plugin>
+   </gazebo>
 </robot>
