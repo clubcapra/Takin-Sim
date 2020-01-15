@@ -21,7 +21,7 @@
     <depend>std_msgs</depend>
     <depend>roscpp</depend>
     <depend>tf</depend>
-    <depend>pysdf</depend>
+    <!-- <depend>pysdf</depend> -->
 
     <!-- The export tag contains other, unspecified, tags -->
     <export>

@@ -19,7 +19,7 @@ find_package(catkin REQUIRED COMPONENTS
     move_base
     map_server
     amcl
-    pysdf
+    # pysdf
 )
 
 catkin_package(
